@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalizador Avançado de Calçado com Concurso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Personalize Seu Calçado</h1>
+  </header>
+
+  <main>
+    <div id="customizer">
+      <!-- Canvas onde o calçado será desenhado -->
+      <canvas id="shoeCanvas" width="600" height="400"></canvas>
+      <div id="controls">
+        <!-- Controles para o corpo do calçado -->
+        <div class="control-group">
+          <h2>Corpo do Calçado</h2>
+          <label for="colorBody">Cor:</label>
+          <input type="color" id="colorBody" value="#ffffff">
+          <label for="textureBody">Textura:</label>
+          <select id="textureBody">
+            <option value="">Sem textura</option>
+            <option value="texture1.png">Textura 1</option>
+            <option value="texture2.png">Textura 2</option>
+          </select>
+          <button id="applyBody">Aplicar</button>
+        </div>
+        <!-- Controles para a sola do calçado -->
+        <div class="control-group">
+          <h2>Sola do Calçado</h2>
+          <label for="colorSole">Cor:</label>
+          <input type="color" id="colorSole" value="#000000">
+          <label for="textureSole">Textura:</label>
+          <select id="textureSole">
+            <option value="">Sem textura</option>
+            <option value="texture3.png">Textura 3</option>
+            <option value="texture4.png">Textura 4</option>
+          </select>
+          <button id="applySole">Aplicar</button>
+        </div>
+      </div>
+    </div>
+    <section id="downloadSection">
+      <button id="downloadBtn">Baixar Design</button>
+    </section>
+
+    <!-- Seção do Concurso -->
+    <section id="contest">
+      <h2>Participe do Concurso</h2>
+      <p>Envie a imagem do seu calçado e conte-nos a sua ideia!</p>
+      <form id="contestForm">
+        <!-- Exibe a imagem gerada a partir do canvas para facilitar o envio -->
+        <label for="contestImage">Imagem do Calçado (pré-visualizada):</label>
+        <canvas id="contestPreview" width="300" height="200"></canvas>
+        <br>
+        <label for="contestText">Explique sua ideia:</label>
+        <textarea id="contestText" placeholder="Descreva sua ideia..." required></textarea>
+        <br>
+        <button type="submit" id="submitContest">Enviar Concurso</button>
+      </form>
+      <!-- Área para exibir o resultado do envio -->
+      <div id="contestResult" class="hidden">
+        <h3>Obrigado por participar!</h3>
+        <p>Sua imagem e ideia foram recebidas.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Meu Site de Calçado Avançado. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
